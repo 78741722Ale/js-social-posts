@@ -19,7 +19,7 @@ Ogni post dovrà avere le informazioni necessarie per stampare la relativa card:
  * @returns il valore della funzione (value)
  */
 function generateLikeNumber(like_number) {
-    let value = Math.floor((Math.random() * like_number) + 1); // Formula matematica
+    let value = Math.floor((Math.random() * like_number)); // Formula matematica
     return value; // Ritorno del valore
 }
 
@@ -43,7 +43,7 @@ const userAuthor = [
         data: "04-12-2022",
         text: cardText(),
         image_post: "https://picsum.photos/480/250",
-        like: generateLikeNumber(140),
+        like: generateLikeNumber(140, 1),
     },
     // Secondo Object - Autore Secondo Post
     {
@@ -53,7 +53,7 @@ const userAuthor = [
         data: "03-09-2021",
         text: cardText(),
         image_post: "https://picsum.photos/480/250",
-        like: generateLikeNumber(100),
+        like: generateLikeNumber(100, 1),
     }
 ];
 console.log(userAuthor);
@@ -62,12 +62,14 @@ console.log(userAuthor);
 const ElementOfPost = document.querySelector('.posts')
 console.log(ElementOfPost);
 
+/* 
+Prendendo come riferimento il layout di esempio presente nell'html, stampiamo i post del nostro feed.
+*/
 
 // Ciclo For Each
 // Qua gli appendo tutto
 
 userAuthor.forEach((element) => {
-
     ElementOfPost.insertAdjacentHTML('beforeend',
     `
     <div class="container">  
@@ -89,11 +91,11 @@ userAuthor.forEach((element) => {
             </div>
             <!-- Tasti mi piace -->
             <div class="col-6 p-3 d-flex justify-content-center align-items-center">
-                <button class="bg-light border-0"><i class="fa-solid fa-thumbs-up"></i> Mi Piace</button>
+                <button class="like bg-light border-0"><i class="fa-solid fa-thumbs-up"></i> Mi Piace</button>
             </div>
             <!-- Piace a: -->
             <div class="col-6 p-3 d-flex justify-content-center align-items-center">
-                <span>Piace a ${element.like} persone</span>
+                <span class="people">Piace a ${element.like} persone</span>
             </div>
         </div>
     </div>`)
@@ -104,7 +106,38 @@ userAuthor.forEach((element) => {
     // console.log(`${element.text}`);
     // console.log(`${element.image_post}`);
     // console.log(`${element.like}`);
+
+// Seleziono il bottone
+    const likeButton = document.querySelector(".like")
+    console.log(likeButton);
+
+// Avvio l'evento
+likeButton.addEventListener('click', function() {
+    // Aggiunta di stile al click
+    likeButton.style.color = "blue"
+    // Aggiunta al numero
+    let PlusLikeBotton = element.like + 1;
+    // Verificato, lo riesco a sommare!
+    console.log(PlusLikeBotton);
+    // Devo solo appenderlooo ma non riescooo
+    document.querySelector(".people").innerHTML = `Piace a ${PlusLikeBotton} persone`;
+})
 });
+
+
+
+
+// Milestone 3
+
+/* 
+Se clicchiamo sul tasto "Mi Piace" cambiamo il colore al testo del bottone e incrementiamo il counter dei likes 
+relativo. Salviamo in un secondo array gli id dei post ai quali abbiamo messo il like.
+*/
+
+// Creata la classe da far comparire all'addEventListener
+
+
+
 
 
 
