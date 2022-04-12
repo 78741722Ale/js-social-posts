@@ -10,29 +10,38 @@
     --title_color : #ffffff;
     --row_h : 400px;
     --col_h : 95%;
+    --profile_picture_h : 60px;
+    --profile_picture_w : 60px;
 }
-
 /* Regola del body */
 body {
     font-family:  Arial, Helvetica, sans-serif !important;
     background-color: var(--bg_body);
 }
-/* Background di contrasto */
-.bg_contrast {
-    background-color: rgba(47, 41, 41, 0.464);
-}
-
-
 /* Regola per il titolo */
 h1 {
     color: var(--title_color);
     font-size: 44px;
 }
-/* Altezza fissa */
-.h_100 {
-    height: var(--row_h);
+/* Regole per le celle descrizione profilo */
+.profile_pic {
+    width: var(--profile_picture_w);
+    height: var(--profile_picture_h);
+    background-color: blanchedalmond;
+    border-radius: 50%;
+}
+.profile_descr {
+    width: 70%;
+    height: var(--profile_picture_h);
+    background-color: rgb(243, 255, 205);
 }
 
-.col_h {
-    height: var(--col_h);
+/* Ho dovuto sovrascrivere le misure del container in questo caso */
+.container {
+    width: 500px !important;
+    height: 500px !important;
+}
+
+.col-2 > img {
+    border-radius: 50%;
 }
