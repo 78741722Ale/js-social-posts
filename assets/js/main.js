@@ -95,7 +95,7 @@ userAuthor.forEach((element) => {
             </div>
             <!-- Piace a: -->
             <div class="col-6 p-3 d-flex justify-content-center align-items-center">
-                <span class="people">Piace a ${element.like} persone</span>
+                <span id="${element.id_post}" class="people">Piace a ${element.like} persone</span>
             </div>
         </div>
     </div>`)
@@ -106,6 +106,19 @@ userAuthor.forEach((element) => {
     // console.log(`${element.text}`);
     // console.log(`${element.image_post}`);
     // console.log(`${element.like}`);
+
+
+
+
+// Milestone 3
+
+/* 
+Se clicchiamo sul tasto "Mi Piace" cambiamo il colore al testo del bottone e incrementiamo il counter dei likes 
+relativo. Salviamo in un secondo array gli id dei post ai quali abbiamo messo il like.
+*/
+
+// Creata la classe da far comparire all'addEventListener
+
 
 // Seleziono il bottone
     const likeButton = document.querySelector(".like")
@@ -120,21 +133,19 @@ likeButton.addEventListener('click', function() {
     // Verificato, lo riesco a sommare!
     console.log(PlusLikeBotton);
     // Devo solo appenderlooo ma non riescooo
-    document.querySelector(".people").innerHTML = `Piace a ${PlusLikeBotton} persone`;
+    document.getElementById(`${element.id_post}`).innerHTML = `Piace a ${PlusLikeBotton} persone`;
 })
 });
 
+// FUNZIOONA
 
 
 
-// Milestone 3
 
-/* 
-Se clicchiamo sul tasto "Mi Piace" cambiamo il colore al testo del bottone e incrementiamo il counter dei likes 
-relativo. Salviamo in un secondo array gli id dei post ai quali abbiamo messo il like.
-*/
 
-// Creata la classe da far comparire all'addEventListener
+
+
+
 
 
 
