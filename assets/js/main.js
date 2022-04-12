@@ -36,11 +36,11 @@ function cardText() {
 
 const userAuthor = [
     // Primo Object - Autore primo post
-    {   
-        id_post : 1,
+    {
+        id_post: 1,
         nome: "Phil Mangione",
         prof_picture: "https://picsum.photos/60/60",
-        data : "04-12-2022",
+        data: "04-12-2022",
         text: cardText(),
         image_post: "https://picsum.photos/480/250",
         like: generateLikeNumber(140),
@@ -57,6 +57,58 @@ const userAuthor = [
     }
 ];
 console.log(userAuthor);
+
+// Elemento che va a richiamare la row
+const ElementOfPost = document.querySelector('.container')
+console.log(ElementOfPost);
+
+
+// Ciclo For Each
+// Qua gli appendo tutto
+
+userAuthor.forEach((element) => {
+
+    ElementOfPost.insertAdjacentHTML('beforeend',
+        `
+        <!-- Immagine del profilo -->
+        <div class="row gy-2 d-flex flex-wrap justify-content-center align-items-center">
+        <div class="col-2 d-flex justify-content-center align-items-center">
+            <img src="${element.prof_picture}" alt="Immagine del profilo utente">
+        </div>
+        <!-- username e Data -->
+        <div class="col-10 ps-0 d-flex flex-column justify-content-between">
+            <h5 class="mb-0">${element.nome}</h5>
+            <span>${element.data}</span>
+        </div>
+        <!-- Testo Descrittivo -->
+        <div class="col-12 p-2">${element.text}</div>
+        <!-- Immagine messa nel profilo con lorem Picsum -->
+        <div class="col-12 d-flex justify-content-center">
+            <img src="${element.image_post}" alt="">
+        </div>
+        <!-- Tasti mi piace -->
+        <div class="col-6 p-3 d-flex justify-content-center align-items-center">
+            <button class="bg-light border-0"><i class="fa-solid fa-thumbs-up"></i> Mi Piace</button>
+        </div>
+        <!-- Piace a: -->
+        <div class="col-6 p-3 d-flex justify-content-center align-items-center">
+            <span>Piace a ${element.like} persone</span>
+        </div>
+        </div>`)
+    // console.log(`${element.id_post}`);
+    // console.log(`${element.nome}`);
+    // console.log(`${element.prof_picture}`);
+    // console.log(`${element.data}`);
+    // console.log(`${element.text}`);
+    // console.log(`${element.image_post}`);
+    // console.log(`${element.like}`);
+});
+
+
+
+
+
+
 
 
 
