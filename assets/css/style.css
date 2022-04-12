@@ -10,8 +10,7 @@
     --title_color : #ffffff;
     --row_h : 400px;
     --col_h : 95%;
-    --profile_picture_h : 60px;
-    --profile_picture_w : 60px;
+
 }
 /* Regola del body */
 body {
@@ -23,18 +22,6 @@ h1 {
     color: var(--title_color);
     font-size: 44px;
 }
-/* Regole per le celle descrizione profilo */
-.profile_pic {
-    width: var(--profile_picture_w);
-    height: var(--profile_picture_h);
-    background-color: blanchedalmond;
-    border-radius: 50%;
-}
-.profile_descr {
-    width: 70%;
-    height: var(--profile_picture_h);
-    background-color: rgb(243, 255, 205);
-}
 
 /* Ho dovuto sovrascrivere le misure del container in questo caso */
 .container {
@@ -42,6 +29,7 @@ h1 {
     height: 500px !important;
 }
 
+/* Immagine di profilo tonda */
 .col-2 > img {
     border-radius: 50%;
 }
