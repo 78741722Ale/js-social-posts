@@ -107,9 +107,6 @@ userAuthor.forEach((element) => {
     // console.log(`${element.image_post}`);
     // console.log(`${element.like}`);
 
-
-
-
 // Milestone 3
 
 /* 
@@ -137,7 +134,7 @@ likeButton.addEventListener('click', function() {
 })
 });
 
-// FUNZIOONA
+// FUNZIONA SOLO SUL PRIMOO
 
 
 
