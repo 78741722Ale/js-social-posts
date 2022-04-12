@@ -71,29 +71,29 @@ userAuthor.forEach((element) => {
     ElementOfPost.insertAdjacentHTML('beforeend',
         `
         <!-- Immagine del profilo -->
-        <div class="row gy-2 d-flex flex-wrap justify-content-center align-items-center">
-        <div class="col-2 d-flex justify-content-center align-items-center">
-            <img src="${element.prof_picture}" alt="Immagine del profilo utente">
-        </div>
-        <!-- username e Data -->
-        <div class="col-10 ps-0 d-flex flex-column justify-content-between">
-            <h5 class="mb-0">${element.nome}</h5>
-            <span>${element.data}</span>
-        </div>
-        <!-- Testo Descrittivo -->
-        <div class="col-12 p-2">${element.text}</div>
-        <!-- Immagine messa nel profilo con lorem Picsum -->
-        <div class="col-12 d-flex justify-content-center">
-            <img src="${element.image_post}" alt="">
-        </div>
-        <!-- Tasti mi piace -->
-        <div class="col-6 p-3 d-flex justify-content-center align-items-center">
-            <button class="bg-light border-0"><i class="fa-solid fa-thumbs-up"></i> Mi Piace</button>
-        </div>
-        <!-- Piace a: -->
-        <div class="col-6 p-3 d-flex justify-content-center align-items-center">
-            <span>Piace a ${element.like} persone</span>
-        </div>
+        <div class="row mt-5 gy-2 bg-light d-flex flex-wrap justify-content-center align-items-center">
+            <div class="col-2 d-flex justify-content-center align-items-center">
+                <img src="${element.prof_picture}" alt="Immagine del profilo utente">
+            </div>
+            <!-- username e Data -->
+            <div class="col-10 ps-0 d-flex flex-column justify-content-between">
+                <h5 class="mb-0">${element.nome}</h5>
+                <span>${element.data}</span>
+            </div>
+            <!-- Testo Descrittivo -->
+            <div class="col-12 p-2">${element.text}</div>
+            <!-- Immagine messa nel profilo con lorem Picsum -->
+            <div class="col-12 d-flex justify-content-center">
+                <img src="${element.image_post}" alt="">
+            </div>
+            <!-- Tasti mi piace -->
+            <div class="col-6 p-3 d-flex justify-content-center align-items-center">
+                <button class="bg-light border-0"><i class="fa-solid fa-thumbs-up"></i> Mi Piace</button>
+            </div>
+            <!-- Piace a: -->
+            <div class="col-6 p-3 d-flex justify-content-center align-items-center">
+                <span>Piace a ${element.like} persone</span>
+            </div>
         </div>`)
     // console.log(`${element.id_post}`);
     // console.log(`${element.nome}`);

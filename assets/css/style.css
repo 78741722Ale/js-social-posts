@@ -26,6 +26,7 @@ h1 {
 /* Ho dovuto sovrascrivere le misure del container in questo caso */
 .container {
     width: 500px !important;
+    margin-bottom: 20px !important;
 }
 
 /* Immagine di profilo tonda */
