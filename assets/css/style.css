@@ -1,0 +1,23 @@
+/* Regola generale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Elemento radice */
+:root {
+    --bg_body : #023047;
+    --title_color : #ffffff;
+}
+
+/* Regola del body */
+body {
+    font-family:  Arial, Helvetica, sans-serif !important;
+    background-color: var(--bg_body);
+}
+
+/* Regola per il titolo */
+h1 {
+    color: var(--title_color);
+    font-size: 44px;
+}
