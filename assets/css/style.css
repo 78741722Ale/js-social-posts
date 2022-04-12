@@ -8,6 +8,8 @@
 :root {
     --bg_body : #023047;
     --title_color : #ffffff;
+    --row_h : 400px;
+    --col_h : 95%;
 }
 
 /* Regola del body */
@@ -15,9 +17,22 @@ body {
     font-family:  Arial, Helvetica, sans-serif !important;
     background-color: var(--bg_body);
 }
+/* Background di contrasto */
+.bg_contrast {
+    background-color: rgba(47, 41, 41, 0.464);
+}
+
 
 /* Regola per il titolo */
 h1 {
     color: var(--title_color);
     font-size: 44px;
+}
+/* Altezza fissa */
+.h_100 {
+    height: var(--row_h);
+}
+
+.col_h {
+    height: var(--col_h);
 }
