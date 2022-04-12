@@ -53,13 +53,13 @@ const userAuthor = [
         data: "03-09-2021",
         text: cardText(),
         image_post: "https://picsum.photos/480/250",
-        like: generateLikeNumber(140),
+        like: generateLikeNumber(100),
     }
 ];
 console.log(userAuthor);
 
 // Elemento che va a richiamare la row
-const ElementOfPost = document.querySelector('.container')
+const ElementOfPost = document.querySelector('.posts')
 console.log(ElementOfPost);
 
 
@@ -69,7 +69,8 @@ console.log(ElementOfPost);
 userAuthor.forEach((element) => {
 
     ElementOfPost.insertAdjacentHTML('beforeend',
-        `
+    `
+    <div class="container">  
         <!-- Immagine del profilo -->
         <div class="row mt-5 gy-2 bg-light d-flex flex-wrap justify-content-center align-items-center">
             <div class="col-2 d-flex justify-content-center align-items-center">
@@ -94,7 +95,8 @@ userAuthor.forEach((element) => {
             <div class="col-6 p-3 d-flex justify-content-center align-items-center">
                 <span>Piace a ${element.like} persone</span>
             </div>
-        </div>`)
+        </div>
+    </div>`)
     // console.log(`${element.id_post}`);
     // console.log(`${element.nome}`);
     // console.log(`${element.prof_picture}`);
