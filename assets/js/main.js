@@ -43,7 +43,7 @@ const userAuthor = [
         data: "04-12-2022",
         text: cardText(),
         image_post: "https://picsum.photos/480/250",
-        like: generateLikeNumber(140, 1),
+        like: generateLikeNumber(150),
     },
     // Secondo Object - Autore Secondo Post
     {
@@ -53,13 +53,13 @@ const userAuthor = [
         data: "03-09-2021",
         text: cardText(),
         image_post: "https://picsum.photos/480/250",
-        like: generateLikeNumber(100, 1),
+        like: generateLikeNumber(150),
     }
 ];
 console.log(userAuthor);
 
 // Elemento che va a richiamare la row
-const ElementOfPost = document.querySelector('.posts')
+const ElementOfPost = document.querySelector(".posts")
 console.log(ElementOfPost);
 
 /* 
@@ -122,14 +122,14 @@ relativo. Salviamo in un secondo array gli id dei post ai quali abbiamo messo il
     console.log(likeButton);
 
 // Avvio l'evento
-likeButton.addEventListener('click', function() {
+likeButton.addEventListener("click", function() {
     // Aggiunta di stile al click
-    likeButton.style.color = "blue"
+    likeButton.style.color = "blue";
     // Aggiunta al numero
     let PlusLikeBotton = element.like + 1;
     // Verificato, lo riesco a sommare!
     console.log(PlusLikeBotton);
-    // Devo solo appenderlooo ma non riescooo
+    // Devo solo appenderlooo ma non riescooo   
     document.getElementById(`${element.id_post}`).innerHTML = `Piace a ${PlusLikeBotton} persone`;
 })
 });
